@@ -1,0 +1,27 @@
+{
+  "include": [
+    "."
+  ],
+  "compilerOptions": {
+    "lib": [
+      "ESNext"
+    ],
+    "jsx": "preserve",
+    "target": "ESNext",
+    "skipLibCheck": true,
+    "useDefineForClassFields": true,
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "module": "ESNext",
+    "isolatedModules": true,
+    "declaration": true,
+    "declarationDir": "./dist",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "verbatimModuleSyntax": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}

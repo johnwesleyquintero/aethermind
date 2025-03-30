@@ -1,0 +1,7 @@
+{
+  "buildCommand": "pnpm run build",
+  "devCommand": "pnpm dev",
+  "framework": "remix",
+  "installCommand": "pnpm install",
+  "outputDirectory": "build/client"
+}
