@@ -41,7 +41,9 @@ site
 
 # commit file ignore
 app/commit.json
-changelogUI.md
-docs/instructions/Roadmap.md
+
+# editor ignore
+*.sublime-workspace
+*.sublime-project
 .cursorrules
 .qodo
