@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useStore } from '@nanostores/react';
 import { classNames } from '~/utils/classNames';
 import { profileStore } from '~/lib/stores/profile';
+import { Logo } from '~/components/ui/Logo';
 import type { TabType, Profile } from './types';
 
 const BetaLabel = () => (

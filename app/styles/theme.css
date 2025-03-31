@@ -1,0 +1,49 @@
+:root {
+  /* Brand Colors */
+  --aether-primary: #6366f1;
+  --aether-secondary: #818cf8;
+  --aether-accent: #4f46e5;
+  
+  /* Extended Palette */
+  --aether-success: #10b981;
+  --aether-warning: #f59e0b;
+  --aether-error: #ef4444;
+  --aether-info: #3b82f6;
+  
+  /* UI Colors */
+  --aether-surface: #ffffff;
+  --aether-surface-hover: #f8fafc;
+  --aether-border: #e2e8f0;
+  --aether-divider: #f1f5f9;
+  
+  /* Code Colors */
+  --aether-code-bg: #0f172a;
+  --aether-code-text: #e2e8f0;
+  --aether-code-comment: #64748b;
+  --aether-code-string: #a5b4fc;
+  
+  /* Z-Index Layers */
+  --aether-z-drawer: 40;
+  --aether-z-modal: 50;
+  --aether-z-tooltip: 60;
+  
+  /* Theme Colors */
+  --aether-bg-light: #ffffff;
+  --aether-bg-dark: #0f172a;
+  --aether-text-light: #1e293b;
+  --aether-text-dark: #e2e8f0;
+  
+  /* Brand Gradients */
+  --aether-gradient-1: linear-gradient(120deg, var(--aether-primary), var(--aether-secondary));
+  --aether-gradient-2: linear-gradient(45deg, var(--aether-secondary), var(--aether-accent));
+  
+  /* Animations */
+  --aether-transition: all 0.2s ease-in-out;
+  --aether-animation-duration: 0.3s;
+}
+
+/* Dark Mode Overrides */
+[data-theme='dark'] {
+  --aether-background: var(--aether-bg-dark);
+  --aether-text: var(--aether-text-dark);
+}

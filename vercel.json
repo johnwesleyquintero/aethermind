@@ -1,7 +1,33 @@
 {
-  "buildCommand": "pnpm run build",
-  "devCommand": "pnpm dev",
-  "framework": "remix",
-  "installCommand": "pnpm install",
-  "outputDirectory": "build/client"
+  "framework": "vite",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "installCommand": "npm install",
+  "regions": ["fra1"],
+  "env": {
+    "NODE_VERSION": "18.18.0",
+    "VITE_APP_NAME": "Aethermind",
+    "VITE_APP_DESCRIPTION": "Your Personal Dev Engineer",
+    "VITE_APP_URL": "https://aethermind-dev.vercel.app"
+  },
+  "devCommand": "pnpm run dev",
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cross-Origin-Embedder-Policy",
+          "value": "require-corp"
+        },
+        {
+          "key": "Cross-Origin-Opener-Policy",
+          "value": "same-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        }
+      ]
+    }
+  ]
 }

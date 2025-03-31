@@ -7,25 +7,23 @@ import { tabConfigurationStore } from '~/lib/stores/settings';
 import { TAB_LABELS } from '~/components/@settings/core/constants';
 import type { TabType } from '~/components/@settings/core/types';
 import { toast } from 'react-toastify';
-import { TbLayoutGrid } from 'react-icons/tb';
+import { LayoutGrid } from 'lucide-react';
 import { useSettingsStore } from '~/lib/stores/settings';
+import { Icons } from '~/lib/components/Icons';
 
-// Define tab icons mapping
-const TAB_ICONS: Record<TabType, string> = {
-  profile: 'i-ph:user-circle-fill',
-  settings: 'i-ph:gear-six-fill',
-  notifications: 'i-ph:bell-fill',
-  features: 'i-ph:star-fill',
-  data: 'i-ph:database-fill',
-  'cloud-providers': 'i-ph:cloud-fill',
-  'local-providers': 'i-ph:desktop-fill',
-  'service-status': 'i-ph:activity-fill',
-  connection: 'i-ph:wifi-high-fill',
-  debug: 'i-ph:bug-fill',
-  'event-logs': 'i-ph:list-bullets-fill',
-  update: 'i-ph:arrow-clockwise-fill',
-  'task-manager': 'i-ph:chart-line-fill',
-  'tab-management': 'i-ph:squares-four-fill',
+// Define tab icons mapping with Lucide React icons
+const TAB_ICONS: Record<TabType, JSX.Element> = {
+  profile: <Icons.userCircle className="w-5 h-5" />,
+  settings: <Icons.settings className="w-5 h-5" />,
+  notifications: <Icons.bell className="w-5 h-5" />,
+  features: <Icons.star className="w-5 h-5" />,
+  data: <Icons.database className="w-5 h-5" />,
+  'cloud-providers': <Icons.cloud className="w-5 h-5" />,
+  'local-providers': <Icons.monitor className="w-5 h-5" />,
+  'service-status': <Icons.activity className="w-5 h-5" />,
+  debug: <Icons.bug className="w-5 h-5" />,
+  'event-logs': <Icons.scroll className="w-5 h-5" />,
+  update: <Icons.refresh className="w-5 h-5" />,
 };
 
 // Define which tabs are default in user mode
@@ -153,7 +151,7 @@ export const TabManagement = () => {
                 'text-purple-500',
               )}
             >
-              <TbLayoutGrid className="w-5 h-5" />
+              <LayoutGrid className="w-5 h-5" />
             </div>
             <div>
               <h4 className="text-md font-medium text-bolt-elements-textPrimary">Tab Management</h4>
@@ -233,7 +231,7 @@ export const TabManagement = () => {
                     <div
                       className={classNames('w-6 h-6', 'transition-transform duration-200', 'group-hover:rotate-12')}
                     >
-                      <div className={classNames(TAB_ICONS[tab.id], 'w-full h-full')} />
+                      {TAB_ICONS[tab.id]}
                     </div>
                   </motion.div>
 
@@ -327,7 +325,7 @@ export const TabManagement = () => {
                     <div
                       className={classNames('w-6 h-6', 'transition-transform duration-200', 'group-hover:rotate-12')}
                     >
-                      <div className={classNames(TAB_ICONS[tab.id], 'w-full h-full')} />
+                      {TAB_ICONS[tab.id]}
                     </div>
                   </motion.div>
 

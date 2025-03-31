@@ -1,49 +1,60 @@
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
+# Dependencies
 node_modules
+.pnpm-store
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build & Deploy
+build
 dist
-dist-ssr
+.vercel
+.next
+.turbo
+
+# Environment & Secrets
+.env
+.env.*
+!.env.example
 *.local
 
+# IDE & Editors
 .vscode/*
-.vscode/launch.json
 !.vscode/extensions.json
+!.vscode/settings.json
 .idea
-.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
 
-/.history
-/.cache
-/build
-functions/build/
-.env.local
-.env
-.dev.vars
-*.vars
-.wrangler
-_worker.bundle
+# Logs & Debug
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log*
 
-Modelfile
-modelfiles
+# Testing & Coverage
+coverage
+.nyc_output
+*.lcov
 
-# docs ignore
-site
+# Operating System
+.DS_Store
+Thumbs.db
+Desktop.ini
 
-# commit file ignore
-app/commit.json
+# Temporary & Cache
+.temp
+.tmp
+.cache
+*.tsbuildinfo
 
-# editor ignore
-*.sublime-workspace
-*.sublime-project
-.cursorrules
-.qodo
+# Project specific
+.bolt-cache/
+public/workspaces/*
+!public/workspaces/.gitkeep

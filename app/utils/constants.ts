@@ -26,6 +26,22 @@ PROVIDER_LIST.forEach((provider) => {
 
 export const STARTER_TEMPLATES: Template[] = [
   {
+    name: 'aether-vite-react',
+    label: 'Aethermind React',
+    description: 'Official Aethermind React + Vite template with AI features',
+    githubRepo: 'johnwesleyquintero/aether-vite-react-template',
+    tags: ['react', 'vite', 'typescript', 'ai'],
+    icon: 'i-aether:react'
+  },
+  {
+    name: 'aether-next-app',
+    label: 'Next.js App Router',
+    description: 'Full-stack Next.js 14 template with App Router',
+    githubRepo: 'johnwesleyquintero/aether-next-template',
+    tags: ['next.js', 'react', 'fullstack'],
+    icon: 'i-aether:next'
+  },
+  {
     name: 'bolt-astro-basic',
     label: 'Astro Basic',
     description: 'Lightweight Astro starter template for building fast static websites',
@@ -114,3 +130,19 @@ export const STARTER_TEMPLATES: Template[] = [
     icon: 'i-bolt:angular',
   },
 ];
+
+export const AETHER_CONFIG = {
+  apiEndpoint: '/api/v1',
+  wsEndpoint: '/ws',
+  defaultTheme: 'system',
+  updateChannel: 'stable',
+  telemetryEnabled: false
+};
+
+export const PROJECT_METADATA = {
+  repo: 'johnwesleyquintero/aethermind',
+  issues: 'https://github.com/johnwesleyquintero/aethermind/issues',
+  docs: 'https://aethermind-dev.vercel.app/docs',
+  discord: 'https://discord.gg/aethermind',
+  version: '1.0.0'
+};

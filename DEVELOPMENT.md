@@ -1,41 +1,66 @@
-# Local Development Setup
+# Development Guide
 
-1. Install Dependencies:
+## Prerequisites
+
+### Node.js Setup
+
+1. Install Node Version Manager (nvm):
+   - Windows: [nvm-windows](https://github.com/coreybutler/nvm-windows/releases)
+   - Unix/Mac: `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash`
+
+2. Install and use the correct Node.js version:
    ```bash
-   pnpm install
+   nvm install 18.18.0
+   nvm use 18.18.0
    ```
 
-2. Setup Environment:
-   Create a `.env.local` file in the root directory with necessary environment variables.
-
-3. Start Development Server:
+3. Verify installation:
    ```bash
-   pnpm dev
+   node --v # Should output v18.18.0
    ```
-   This will start the development server at http://localhost:5173
 
-4. Building for Production:
+## Quick Start
+
+1. Install dependencies:
    ```bash
-   pnpm build
+   npm install
    ```
 
-5. Running Production Build:
+2. Environment Setup:
+   - Copy `.env.example` to `.env.local`
+   - Add required API key:
+     ```bash
+     GEMINI_API_KEY=xxx
+     ```
+
+3. Development:
    ```bash
-   pnpm start
+   npm run dev
    ```
 
-## Deployment
-
-The application is configured to deploy to Vercel at aethermind.vercel.app.
-To deploy:
+4. Production Build:
+   ```bash
+   npm run build
    ```
-      https://github.com/johnwesleyquintero/aethermind.git
-   ```
-1. Connect your repository to Vercel
-2. Configure the following build settings:
-   - Framework Preset: Remix
-   - Build Command: pnpm run build
-   - Output Directory: build/client
-   - Install Command: pnpm install
 
-Remember to set up any required environment variables in your Vercel project settings.
+## Vercel Deployment
+
+1. Connect your GitHub repository to Vercel
+2. Configure build settings:
+   - Framework: Vite
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
+   - Install Command: `npm install`
+
+## Environment Variables
+
+Required for Vercel:
+- `GEMINI_API_KEY`: Google Gemini API key
+- `NODE_VERSION`: 18.x
+
+## Stack Overview
+
+- **Framework**: React + Vite
+- **Styling**: TailwindCSS
+- **State**: Nanostores
+- **AI**: Google Gemini

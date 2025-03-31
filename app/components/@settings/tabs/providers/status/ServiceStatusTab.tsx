@@ -11,6 +11,17 @@ import { FaCloud, FaBrain } from 'react-icons/fa';
 import type { IconType } from 'react-icons';
 import { useSettings } from '~/lib/hooks/useSettings';
 import { useToast } from '~/components/ui/use-toast';
+import {
+  Cloud,
+  Bot,
+  Brain,
+  Cpu,
+  Server,
+  AlertCircle,
+  CheckCircle,
+  XCircle
+} from 'lucide-react';
+import { Icons } from '~/lib/components/Icons';
 
 // Types
 type ProviderName =
@@ -186,6 +197,23 @@ const PROVIDER_ICONS: Record<ProviderName, IconType> = {
   Together: BsCloud,
   XAI: BsRobot,
   Deepseek: BiCodeBlock,
+};
+
+// Replace status icons
+const StatusIcons = {
+  operational: <Icons.checkCircle className="w-5 h-5 text-green-500" />,
+  degraded: <Icons.alertTriangle className="w-5 h-5 text-yellow-500" />,
+  down: <Icons.xCircle className="w-5 h-5 text-red-500" />
+};
+
+const ProviderIcons: Record<string, React.ReactNode> = {
+  AmazonBedrock: <Icons.cloud className="w-5 h-5" />,
+  OpenAI: <Icons.bot className="w-5 h-5" />,
+  Google: <Icons.code className="w-5 h-5" />,
+  Anthropic: <Icons.bot className="w-5 h-5" />,
+  HuggingFace: <Icons.brain className="w-5 h-5" />,
+  Together: <Icons.server className="w-5 h-5" />,
+  Perplexity: <Icons.cpu className="w-5 h-5" />
 };
 
 const ServiceStatusTab = () => {

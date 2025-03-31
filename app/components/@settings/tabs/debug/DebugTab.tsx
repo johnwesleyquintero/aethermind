@@ -10,6 +10,18 @@ import { Badge } from '~/components/ui/Badge';
 import { Dialog, DialogRoot, DialogTitle } from '~/components/ui/Dialog';
 import { jsPDF } from 'jspdf';
 import { useSettings } from '~/lib/hooks/useSettings';
+import {
+  Bug,
+  Cpu,
+  Memory,
+  Activity,
+  HardDrive,
+  Network,
+  RefreshCw,
+  AlertTriangle,
+  XCircle,
+  CheckCircle
+} from 'lucide-react';
 
 interface SystemInfo {
   os: string;
@@ -216,6 +228,20 @@ const DependencySection = ({
       </CollapsibleContent>
     </Collapsible>
   );
+};
+
+const StatusIcons = {
+  error: <XCircle className="w-4 h-4 text-red-500" />,
+  warning: <AlertTriangle className="w-4 h-4 text-yellow-500" />,
+  success: <CheckCircle className="w-4 h-4 text-green-500" />
+};
+
+const MetricsIcons = {
+  cpu: <Cpu className="w-5 h-5" />,
+  memory: <Memory className="w-5 h-5" />,
+  activity: <Activity className="w-5 h-5" />,
+  storage: <HardDrive className="w-5 h-5" />,
+  network: <Network className="w-5 h-5" />
 };
 
 export default function DebugTab() {

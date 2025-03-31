@@ -1,43 +1,30 @@
 import { useStore } from '@nanostores/react';
 import type { LinksFunction } from '@remix-run/cloudflare';
-import { Links, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/react';
-import tailwindReset from '@unocss/reset/tailwind-compat.css?url';
+import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/react';
 import { themeStore } from './lib/stores/theme';
-import { stripIndents } from './utils/stripIndent';
-import { createHead } from 'remix-island';
-import { useEffect } from 'react';
-import { DndProvider } from 'react-dnd';
-import { HTML5Backend } from 'react-dnd-html5-backend';
+import { ErrorBoundary } from './components/ErrorBoundary';
+import { trackPerformance } from './lib/stores/metrics';
 import { ClientOnly } from 'remix-utils/client-only';
 
-import reactToastifyStyles from 'react-toastify/dist/ReactToastify.css?url';
+// Optimize stylesheet imports
 import globalStyles from './styles/index.scss?url';
-import xtermStyles from '@xterm/xterm/css/xterm.css?url';
-
-import 'virtual:uno.css';
+import '~/styles/tailwind.css';
 
 export const links: LinksFunction = () => [
+  { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+  { rel: "icon", type: "image/png", sizes: "512x512", href: "/icon.png" },
+  { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
+  { rel: "manifest", href: "/manifest.json" },
   {
     rel: 'icon',
     href: '/favicon.svg',
     type: 'image/svg+xml',
   },
-  { rel: 'stylesheet', href: reactToastifyStyles },
-  { rel: 'stylesheet', href: tailwindReset },
   { rel: 'stylesheet', href: globalStyles },
-  { rel: 'stylesheet', href: xtermStyles },
   {
     rel: 'preconnect',
     href: 'https://fonts.googleapis.com',
-  },
-  {
-    rel: 'preconnect',
-    href: 'https://fonts.gstatic.com',
     crossOrigin: 'anonymous',
-  },
-  {
-    rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
   },
 ];
 
@@ -83,23 +70,28 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
-import { logStore } from './lib/stores/logs';
-
 export default function App() {
   const theme = useStore(themeStore);
 
   useEffect(() => {
+    // Start performance tracking
+    const interval = setInterval(trackPerformance, 30000); // Every 30 seconds
+    
     logStore.logSystem('Aethermind initialized', {
       theme,
       platform: navigator.platform,
       userAgent: navigator.userAgent,
       timestamp: new Date().toISOString(),
     });
+
+    return () => clearInterval(interval);
   }, []);
 
   return (
-    <Layout>
-      <Outlet />
-    </Layout>
+    <ErrorBoundary>
+      <Layout>
+        <Outlet />
+      </Layout>
+    </ErrorBoundary>
   );
 }

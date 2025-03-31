@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --aether-background: theme('colors.white');
+  --aether-text: theme('colors.gray.900');
+}
+
+.dark {
+  --aether-background: theme('colors.gray.950');
+  --aether-text: theme('colors.gray.50');
+}
+
+@layer base {
+  body {
+    @apply bg-aether-background text-aether-text antialiased;
+  }
+}
+
+@layer components {
+  .aether-gradient {
+    @apply bg-gradient-to-r from-aether-primary via-aether-secondary to-aether-accent bg-clip-text text-transparent;
+  }
+  
+  .aether-button {
+    @apply px-4 py-2 rounded-lg bg-aether-primary text-white hover:bg-aether-accent transition-colors;
+  }
+}

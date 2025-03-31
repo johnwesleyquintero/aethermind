@@ -1,6 +1,30 @@
-# Contribution Guidelines
+# Contributing to Aethermind
 
-Welcome! This guide provides all the details you need to contribute effectively to the project. Thank you for helping us make **bolt.diy** a better tool for developers worldwide. 💡
+First off, thank you for considering contributing to Aethermind! This project builds upon the excellent foundation of Bolt.DIY by StackBlitz Labs.
+
+## Project Background
+
+Aethermind is a fork of [Bolt.DIY](https://github.com/stackblitz-labs/bolt.diy) that extends its capabilities with additional AI features. When contributing, please be mindful of:
+
+- Maintaining compatibility with Bolt.DIY's core architecture
+- Following the existing code style and conventions
+- Properly documenting AI-specific features and changes
+
+## How to Contribute
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## Code of Conduct
+
+Please note that this project follows the same code of conduct as Bolt.DIY. Be respectful and constructive in all interactions.
+
+## Attribution
+
+When contributing to Aethermind, remember that we build upon Bolt.DIY's foundation. Always maintain proper attribution to the original project and its contributors.
 
 ---
 

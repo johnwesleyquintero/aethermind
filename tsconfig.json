@@ -1,38 +1,23 @@
 {
   "compilerOptions": {
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "types": [
-      "@remix-run/cloudflare",
-      "vite/client",
-      "@cloudflare/workers-types/2023-07-01",
-      "@types/dom-speech-recognition",
-      "electron"
-    ],
-    "isolatedModules": true,
-    "esModuleInterop": true,
-    "jsx": "react-jsx",
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "resolveJsonModule": true,
     "target": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
     "strict": true,
-    "allowJs": true,
-    "skipLibCheck": true,
-    "verbatimModuleSyntax": true,
-    "forceConsistentCasingInFileNames": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
       "~/*": ["./app/*"]
-    },
-    // vite takes care of building everything, not tsc
-    "noEmit": true
+    }
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "**/.server/**/*.ts",
-    "**/.server/**/*.tsx",
-    "**/.client/**/*.ts",
-    "**/.client/**/*.tsx"
-  ]
+  "include": ["app", "electron"],
+  "exclude": ["node_modules", "build", "dist"]
 }

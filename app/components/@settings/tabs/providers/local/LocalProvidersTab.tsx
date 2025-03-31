@@ -14,15 +14,16 @@ import { providerBaseUrlEnvKeys } from '~/utils/constants';
 import { useToast } from '~/components/ui/use-toast';
 import { Progress } from '~/components/ui/Progress';
 import OllamaModelInstaller from './OllamaModelInstaller';
+import { Bot, Cpu, Server } from 'lucide-react';
 
 // Add type for provider names to ensure type safety
 type ProviderName = 'Ollama' | 'LMStudio' | 'OpenAILike';
 
 // Update the PROVIDER_ICONS type to use the ProviderName type
-const PROVIDER_ICONS: Record<ProviderName, IconType> = {
-  Ollama: BsRobot,
-  LMStudio: BsRobot,
-  OpenAILike: TbBrandOpenai,
+const PROVIDER_ICONS: Record<ProviderName, React.ReactNode> = {
+  Ollama: <Bot className="w-5 h-5" />,
+  LMStudio: <Cpu className="w-5 h-5" />,
+  OpenAILike: <Server className="w-5 h-5" />
 };
 
 // Update PROVIDER_DESCRIPTIONS to use the same type
@@ -449,10 +450,7 @@ export default function LocalProvidersTab() {
                     )}
                     whileHover={{ scale: 1.1, rotate: 5 }}
                   >
-                    {React.createElement(PROVIDER_ICONS[provider.name as ProviderName] || BsRobot, {
-                      className: 'w-7 h-7',
-                      'aria-label': `${provider.name} icon`,
-                    })}
+                    {PROVIDER_ICONS[provider.name as ProviderName] || BsRobot}
                   </motion.div>
                   <div>
                     <div className="flex items-center gap-2">
@@ -658,10 +656,7 @@ export default function LocalProvidersTab() {
                         )}
                         whileHover={{ scale: 1.1, rotate: 5 }}
                       >
-                        {React.createElement(PROVIDER_ICONS[provider.name as ProviderName] || BsRobot, {
-                          className: 'w-7 h-7',
-                          'aria-label': `${provider.name} icon`,
-                        })}
+                        {PROVIDER_ICONS[provider.name as ProviderName] || BsRobot}
                       </motion.div>
                       <div>
                         <div className="flex items-center gap-2">

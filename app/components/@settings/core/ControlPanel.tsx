@@ -23,6 +23,7 @@ import { TAB_LABELS, DEFAULT_TAB_CONFIG } from './constants';
 import { DialogTitle } from '~/components/ui/Dialog';
 import { AvatarDropdown } from './AvatarDropdown';
 import BackgroundRays from '~/components/ui/BackgroundRays';
+import { Settings, Bell, Star, Database, Cloud, Desktop, Activity, Bug, History, RefreshCw } from 'lucide-react';
 
 // Import all tab components
 import ProfileTab from '~/components/@settings/tabs/profile/ProfileTab';
@@ -552,4 +553,18 @@ export const ControlPanel = ({ open, onClose }: ControlPanelProps) => {
       </RadixDialog.Portal>
     </RadixDialog.Root>
   );
+};
+
+export const TAB_ICONS: Record<TabType, React.ReactNode> = {
+  profile: <Settings className="w-5 h-5" />,
+  settings: <Settings className="w-5 h-5" />,
+  notifications: <Bell className="w-5 h-5" />,
+  features: <Star className="w-5 h-5" />,
+  data: <Database className="w-5 h-5" />,
+  'cloud-providers': <Cloud className="w-5 h-5" />,
+  'local-providers': <Desktop className="w-5 h-5" />,
+  'service-status': <Activity className="w-5 h-5" />,
+  debug: <Bug className="w-5 h-5" />,
+  'event-logs': <History className="w-5 h-5" />,
+  update: <RefreshCw className="w-5 h-5" />,
 };
