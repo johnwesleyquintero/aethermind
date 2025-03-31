@@ -24,6 +24,9 @@ const TAB_ICONS: Record<TabType, JSX.Element> = {
   debug: <Icons.bug className="w-5 h-5" />,
   'event-logs': <Icons.scroll className="w-5 h-5" />,
   update: <Icons.refresh className="w-5 h-5" />,
+  'task-manager': <Icons.activity className="w-5 h-5" />,
+  connection: <Icons.network className="w-5 h-5" />,
+  'tab-management': <Icons.layoutGrid className="w-5 h-5" />
 };
 
 // Define which tabs are default in user mode

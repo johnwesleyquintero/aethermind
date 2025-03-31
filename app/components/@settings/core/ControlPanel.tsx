@@ -23,7 +23,7 @@ import { TAB_LABELS, DEFAULT_TAB_CONFIG } from './constants';
 import { DialogTitle } from '~/components/ui/Dialog';
 import { AvatarDropdown } from './AvatarDropdown';
 import BackgroundRays from '~/components/ui/BackgroundRays';
-import { Settings, Bell, Star, Database, Cloud, Desktop, Activity, Bug, History, RefreshCw } from 'lucide-react';
+import { Settings, Bell, Star, Database, Cloud, Monitor, Activity, Bug, History, RefreshCw } from 'lucide-react';
 
 // Import all tab components
 import ProfileTab from '~/components/@settings/tabs/profile/ProfileTab';
@@ -304,41 +304,25 @@ export const ControlPanel = ({ open, onClose }: ControlPanelProps) => {
     console.log('Current developer mode:', developerMode);
   }, [developerMode]);
 
-  const getTabComponent = (tabId: TabType | 'tab-management') => {
-    if (tabId === 'tab-management') {
-      return <TabManagement />;
-    }
+  const tabComponents: Record<TabType | 'tab-management', React.ReactNode> = {
+    profile: <ProfileTab />,
+    settings: <SettingsTab />,
+    notifications: <NotificationsTab />,
+    features: <FeaturesTab />,
+    data: <DataTab />,
+    'cloud-providers': <CloudProvidersTab />,
+    'local-providers': <LocalProvidersTab />,
+    'service-status': <ServiceStatusTab />,
+    connection: <ConnectionsTab />,
+    debug: <DebugTab />,
+    'event-logs': <EventLogsTab />,
+    update: <UpdateTab />,
+    'task-manager': <TaskManagerTab />,
+    'tab-management': <TabManagement />
+  };
 
-    switch (tabId) {
-      case 'profile':
-        return <ProfileTab />;
-      case 'settings':
-        return <SettingsTab />;
-      case 'notifications':
-        return <NotificationsTab />;
-      case 'features':
-        return <FeaturesTab />;
-      case 'data':
-        return <DataTab />;
-      case 'cloud-providers':
-        return <CloudProvidersTab />;
-      case 'local-providers':
-        return <LocalProvidersTab />;
-      case 'connection':
-        return <ConnectionsTab />;
-      case 'debug':
-        return <DebugTab />;
-      case 'event-logs':
-        return <EventLogsTab />;
-      case 'update':
-        return <UpdateTab />;
-      case 'task-manager':
-        return <TaskManagerTab />;
-      case 'service-status':
-        return <ServiceStatusTab />;
-      default:
-        return null;
-    }
+  const getTabComponent = (tabId: TabType | 'tab-management') => {
+    return tabComponents[tabId] || null;
   };
 
   const getTabUpdateStatus = (tabId: TabType): boolean => {
