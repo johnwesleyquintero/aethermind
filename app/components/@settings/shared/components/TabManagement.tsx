@@ -368,13 +368,12 @@ export const TabManagement = () => {
 };
 
 // Remove unused renderTabIcon function
-// Add type annotations to tab parameters
-const processTab = (tab: BaseTabConfig) => {
+const processTab = (tab: TabType) => {
   const Icon = TAB_ICONS[tab];
   return <Icon className="w-5 h-5" />;
 };
 
-const sortTabs = (a: BaseTabConfig, b: BaseTabConfig) => {
+const sortTabs = (a: TabType, b: TabType) => {
   // ...
 };
 
