@@ -4,6 +4,7 @@ import { useStore } from '@nanostores/react';
 import { classNames } from '~/utils/classNames';
 import { profileStore } from '~/lib/stores/profile';
 import type { TabType, Profile } from './types';
+import { QuestionMark, User, Settings, Activity, Heartbeat } from 'lucide-react';
 
 const BetaLabel = () => (
   <span className="px-1.5 py-0.5 rounded-full bg-purple-500/10 dark:bg-purple-500/20 text-[10px] font-medium text-purple-600 dark:text-purple-400 ml-2">
@@ -36,7 +37,7 @@ export const AvatarDropdown = ({ onSelectTab }: AvatarDropdownProps) => {
             />
           ) : (
             <div className="w-full h-full rounded-full flex items-center justify-center bg-white dark:bg-gray-800 text-gray-400 dark:text-gray-500">
-              <div className="i-ph:question w-6 h-6" />
+              <QuestionMark className="w-6 h-6" />
             </div>
           )}
         </motion.button>
@@ -96,7 +97,7 @@ export const AvatarDropdown = ({ onSelectTab }: AvatarDropdownProps) => {
             )}
             onClick={() => onSelectTab('profile')}
           >
-            <div className="i-ph:user-circle w-4 h-4 text-gray-400 group-hover:text-purple-500 dark:group-hover:text-purple-400 transition-colors" />
+            <User className="w-4 h-4 text-gray-400 group-hover:text-purple-500 dark:group-hover:text-purple-400 transition-colors" />
             Edit Profile
           </DropdownMenu.Item>
 
@@ -112,7 +113,7 @@ export const AvatarDropdown = ({ onSelectTab }: AvatarDropdownProps) => {
             )}
             onClick={() => onSelectTab('settings')}
           >
-            <div className="i-ph:gear-six w-4 h-4 text-gray-400 group-hover:text-purple-500 dark:group-hover:text-purple-400 transition-colors" />
+            <Settings className="w-4 h-4 text-gray-400 group-hover:text-purple-500 dark:group-hover:text-purple-400 transition-colors" />
             Settings
           </DropdownMenu.Item>
 
@@ -130,7 +131,7 @@ export const AvatarDropdown = ({ onSelectTab }: AvatarDropdownProps) => {
             )}
             onClick={() => onSelectTab('task-manager')}
           >
-            <div className="i-ph:activity w-4 h-4 text-gray-400 group-hover:text-purple-500 dark:group-hover:text-purple-400 transition-colors" />
+            <Activity className="w-4 h-4 text-gray-400 group-hover:text-purple-500 dark:group-hover:text-purple-400 transition-colors" />
             Task Manager
             <BetaLabel />
           </DropdownMenu.Item>
@@ -147,7 +148,7 @@ export const AvatarDropdown = ({ onSelectTab }: AvatarDropdownProps) => {
             )}
             onClick={() => onSelectTab('service-status')}
           >
-            <div className="i-ph:heartbeat w-4 h-4 text-gray-400 group-hover:text-purple-500 dark:group-hover:text-purple-400 transition-colors" />
+            <Heartbeat className="w-4 h-4 text-gray-400 group-hover:text-purple-500 dark:group-hover:text-purple-400 transition-colors" />
             Service Status
             <BetaLabel />
           </DropdownMenu.Item>
