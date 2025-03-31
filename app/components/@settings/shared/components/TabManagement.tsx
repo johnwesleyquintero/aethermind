@@ -7,7 +7,7 @@ import { tabConfigurationStore } from '~/lib/stores/settings';
 import { TAB_LABELS } from '~/components/@settings/core/constants';
 import type { TabType } from '~/components/@settings/core/types';
 import { toast } from 'react-toastify';
-import { LayoutGrid } from 'lucide-react';
+import { Bell, Bug, Cloud, Database, LayoutGrid, Monitor, Network, RefreshCw, Star } from 'lucide-react';
 import { useSettingsStore } from '~/lib/stores/settings';
 import { Icons } from '~/lib/components/Icons';
 
@@ -15,18 +15,18 @@ import { Icons } from '~/lib/components/Icons';
 const TAB_ICONS: Record<TabType, JSX.Element> = {
   profile: <Icons.userCircle className="w-5 h-5" />,
   settings: <Icons.settings className="w-5 h-5" />,
-  notifications: <Icons.bell className="w-5 h-5" />,
-  features: <Icons.star className="w-5 h-5" />,
-  data: <Icons.database className="w-5 h-5" />,
-  'cloud-providers': <Icons.cloud className="w-5 h-5" />,
-  'local-providers': <Icons.monitor className="w-5 h-5" />,
+  notifications: <Bell className="w-5 h-5" />,
+  features: <Star className="w-5 h-5" />,
+  data: <Database className="w-5 h-5" />,
+  'cloud-providers': <Cloud className="w-5 h-5" />,
+  'local-providers': <Monitor className="w-5 h-5" />,
   'service-status': <Icons.activity className="w-5 h-5" />,
-  debug: <Icons.bug className="w-5 h-5" />,
+  debug: <Bug className="w-5 h-5" />,
   'event-logs': <Icons.scroll className="w-5 h-5" />,
-  update: <Icons.refresh className="w-5 h-5" />,
+  update: <RefreshCw className="w-5 h-5" />,
   'task-manager': <Icons.activity className="w-5 h-5" />,
-  connection: <Icons.network className="w-5 h-5" />,
-  'tab-management': <Icons.layoutGrid className="w-5 h-5" />
+  connection: <Network className="w-5 h-5" />,
+  'tab-management': <LayoutGrid className="w-5 h-5" />
 };
 
 // Define which tabs are default in user mode

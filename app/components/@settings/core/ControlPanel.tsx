@@ -23,7 +23,7 @@ import { TAB_LABELS, DEFAULT_TAB_CONFIG } from './constants';
 import { DialogTitle } from '~/components/ui/Dialog';
 import { AvatarDropdown } from './AvatarDropdown';
 import BackgroundRays from '~/components/ui/BackgroundRays';
-import { Settings, Bell, Star, Database, Cloud, Monitor, Activity, Bug, History, RefreshCw } from 'lucide-react';
+import { Settings, Bell, Star, Database, Cloud, Monitor, Activity, Bug, History, RefreshCw, Network, Desktop } from 'lucide-react';
 
 // Import all tab components
 import ProfileTab from '~/components/@settings/tabs/profile/ProfileTab';
@@ -182,7 +182,7 @@ export const ControlPanel = ({ open, onClose }: ControlPanelProps) => {
       console.warn('Invalid tab configuration, resetting to defaults');
       resetTabConfiguration();
 
-      return [];
+      return [] as TabVisibilityConfig[];
     }
 
     const notificationsDisabled = profile?.preferences?.notifications === false;
@@ -190,10 +190,10 @@ export const ControlPanel = ({ open, onClose }: ControlPanelProps) => {
     // In developer mode, show ALL tabs without restrictions
     if (developerMode) {
       const seenTabs = new Set<TabType>();
-      const devTabs: ExtendedTabConfig[] = [];
+      const devTabs: ExtendedTabConfig[] = [] as ExtendedTabConfig[];
 
       // Process tabs in order of priority: developer, user, default
-      const processTab = (tab: BaseTabConfig) => {
+      const processTab = (tab: TabVisibilityConfig) => {
         if (!seenTabs.has(tab.id)) {
           seenTabs.add(tab.id);
           devTabs.push({
@@ -219,7 +219,7 @@ export const ControlPanel = ({ open, onClose }: ControlPanelProps) => {
         isExtraDevTab: true,
       });
 
-      return devTabs.sort((a, b) => a.order - b.order);
+      return devTabs.sort((a: ExtendedTabConfig, b: ExtendedTabConfig) => a.order - b.order);
     }
 
     // Optimize user mode tab filtering
@@ -319,7 +319,7 @@ export const ControlPanel = ({ open, onClose }: ControlPanelProps) => {
     update: <UpdateTab />,
     'task-manager': <TaskManagerTab />,
     'tab-management': <TabManagement />
-  };
+  } as Record<TabType | 'tab-management', React.ReactNode>;
 
   const getTabComponent = (tabId: TabType | 'tab-management') => {
     return tabComponents[tabId] || null;
