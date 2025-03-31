@@ -4,29 +4,16 @@ import { useStore } from '@nanostores/react';
 import { Switch } from '~/components/ui/Switch';
 import { classNames } from '~/utils/classNames';
 import { tabConfigurationStore } from '~/lib/stores/settings';
-import { TAB_LABELS } from '~/components/@settings/core/constants';
+import { TAB_LABELS, TAB_ICONS } from '~/components/@settings/core/constants';
 import type { TabType } from '~/components/@settings/core/types';
 import { toast } from 'react-toastify';
-import { Bell, Bug, Cloud, Database, LayoutGrid, Monitor, Network, RefreshCw, Star } from 'lucide-react';
+import { LayoutGrid } from 'lucide-react';
 import { useSettingsStore } from '~/lib/stores/settings';
-import { Icons } from '~/lib/components/Icons';
 
-// Define tab icons mapping with Lucide React icons
-const TAB_ICONS: Record<TabType, JSX.Element> = {
-  profile: <Icons.userCircle className="w-5 h-5" />,
-  settings: <Icons.settings className="w-5 h-5" />,
-  notifications: <Bell className="w-5 h-5" />,
-  features: <Star className="w-5 h-5" />,
-  data: <Database className="w-5 h-5" />,
-  'cloud-providers': <Cloud className="w-5 h-5" />,
-  'local-providers': <Monitor className="w-5 h-5" />,
-  'service-status': <Icons.activity className="w-5 h-5" />,
-  debug: <Bug className="w-5 h-5" />,
-  'event-logs': <Icons.scroll className="w-5 h-5" />,
-  update: <RefreshCw className="w-5 h-5" />,
-  'task-manager': <Icons.activity className="w-5 h-5" />,
-  connection: <Network className="w-5 h-5" />,
-  'tab-management': <LayoutGrid className="w-5 h-5" />
+// Render tab icon with consistent styling
+const renderTabIcon = (tab: TabType) => {
+  const Icon = TAB_ICONS[tab];
+  return <Icon className="w-5 h-5" />;
 };
 
 // Define which tabs are default in user mode

@@ -4,7 +4,7 @@ import { useStore } from '@nanostores/react';
 import { classNames } from '~/utils/classNames';
 import { profileStore } from '~/lib/stores/profile';
 import type { TabType, Profile } from './types';
-import { QuestionMark, User, Settings, Activity, Heartbeat } from 'lucide-react';
+import { HelpCircle, User, Settings, Activity, Heart } from 'lucide-react';
 
 const BetaLabel = () => (
   <span className="px-1.5 py-0.5 rounded-full bg-purple-500/10 dark:bg-purple-500/20 text-[10px] font-medium text-purple-600 dark:text-purple-400 ml-2">
@@ -37,7 +37,7 @@ export const AvatarDropdown = ({ onSelectTab }: AvatarDropdownProps) => {
             />
           ) : (
             <div className="w-full h-full rounded-full flex items-center justify-center bg-white dark:bg-gray-800 text-gray-400 dark:text-gray-500">
-              <QuestionMark className="w-6 h-6" />
+              <HelpCircle className="w-6 h-6" />
             </div>
           )}
         </motion.button>
@@ -73,7 +73,7 @@ export const AvatarDropdown = ({ onSelectTab }: AvatarDropdownProps) => {
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-gray-400 dark:text-gray-500 font-medium text-lg">
-                  <span className="relative -top-0.5">?</span>
+                  <HelpCircle className="w-6 h-6" />
                 </div>
               )}
             </div>

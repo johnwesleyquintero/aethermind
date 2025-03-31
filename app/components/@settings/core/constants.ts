@@ -1,21 +1,22 @@
 import type { TabType } from './types';
+import { UserCircle, Settings, Bell, Star, Database, Cloud, Monitor, Activity, Network, Bug, ScrollText, RefreshCw, LineChart, LayoutGrid } from 'lucide-react';
 
-export const TAB_ICONS: Record<TabType, string> = {
-  profile: 'i-ph:user-circle-fill',
-  settings: 'i-ph:gear-six-fill',
-  notifications: 'i-ph:bell-fill',
-  features: 'i-ph:star-fill',
-  data: 'i-ph:database-fill',
-  'cloud-providers': 'i-ph:cloud-fill',
-  'local-providers': 'i-ph:desktop-fill',
-  'service-status': 'i-ph:activity-bold',
-  connection: 'i-ph:wifi-high-fill',
-  debug: 'i-ph:bug-fill',
-  'event-logs': 'i-ph:list-bullets-fill',
-  update: 'i-ph:arrow-clockwise-fill',
-  'task-manager': 'i-ph:chart-line-fill',
-  'tab-management': 'i-ph:squares-four-fill',
-};
+export const TAB_ICONS = {
+  profile: UserCircle,
+  settings: Settings,
+  notifications: Bell,
+  features: Star,
+  data: Database,
+  'cloud-providers': Cloud,
+  'local-providers': Monitor,
+  'service-status': Activity,
+  connection: Network,
+  debug: Bug,
+  'event-logs': ScrollText,
+  update: RefreshCw,
+  'task-manager': LineChart,
+  'tab-management': LayoutGrid,
+} as const;
 
 export const TAB_LABELS: Record<TabType, string> = {
   profile: 'Profile',
