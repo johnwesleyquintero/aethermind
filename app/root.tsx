@@ -11,10 +11,10 @@ import globalStyles from './styles/index.scss?url';
 import '~/styles/tailwind.css';
 
 export const links: LinksFunction = () => [
-  { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-  { rel: "icon", type: "image/png", sizes: "512x512", href: "/icon.png" },
-  { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
-  { rel: "manifest", href: "/manifest.json" },
+  { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+  { rel: 'icon', type: 'image/png', sizes: '512x512', href: '/icon.png' },
+  { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+  { rel: 'manifest', href: '/manifest.json' },
   {
     rel: 'icon',
     href: '/favicon.svg',
@@ -46,8 +46,8 @@ export const Head = createHead(() => (
   <>
     <meta charSet="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Aethermind - Your Personal Dev Engineer" />
-  <title>Aethermind</title>
+    <meta name="description" content="Aethermind - Your Personal Dev Engineer" />
+    <title>Aethermind</title>
     <Meta />
     <Links />
     <script dangerouslySetInnerHTML={{ __html: inlineThemeCode }} />
@@ -76,7 +76,7 @@ export default function App() {
   useEffect(() => {
     // Start performance tracking
     const interval = setInterval(trackPerformance, 30000); // Every 30 seconds
-    
+
     logStore.logSystem('Aethermind initialized', {
       theme,
       platform: navigator.platform,

@@ -8,14 +8,7 @@ import { motion } from 'framer-motion';
 import { classNames } from '~/utils/classNames';
 import { toast } from 'react-toastify';
 import { providerBaseUrlEnvKeys } from '~/utils/constants';
-import { 
-  Cloud, 
-  Brain, 
-  Bot, 
-  Cpu, 
-  Code2,
-  Server
-} from 'lucide-react';
+import { Cloud, Brain, Bot, Cpu, Code2, Server } from 'lucide-react';
 
 // Add type for provider names to ensure type safety
 type ProviderName =
@@ -41,7 +34,7 @@ const PROVIDER_ICONS: Record<string, React.ReactNode> = {
   HuggingFace: <Brain className="w-5 h-5" />,
   Perplexity: <Cpu className="w-5 h-5" />,
   OpenAI: <Bot className="w-5 h-5" />,
-  Together: <Server className="w-5 h-5" />
+  Together: <Server className="w-5 h-5" />,
 };
 
 // Update PROVIDER_DESCRIPTIONS to use the same type

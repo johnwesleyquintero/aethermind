@@ -3,7 +3,7 @@ import { AIProvider, type AIConfig } from '../providers';
 import { GeminiProvider } from '../providers/gemini';
 
 export const aiConfigStore = atom<AIConfig>({
-  defaultProvider: 'openai'
+  defaultProvider: 'openai',
 });
 
 export const providerStore = atom<AIProvider | null>(null);
@@ -11,25 +11,27 @@ export const providerStore = atom<AIProvider | null>(null);
 export function initializeAI(config: AIConfig) {
   // Prioritize Gemini if API key is available
   if (config.geminiApiKey) {
-    const geminiProvider = new GeminiProvider({ 
+    const geminiProvider = new GeminiProvider({
       apiKey: config.geminiApiKey,
       generationConfig: {
         temperature: 0.7,
         topP: 0.95,
-        maxTokens: 8192
+        maxTokens: 8192,
       },
       safetySettings: [
         {
           category: 'HARM_CATEGORY_DANGEROUS',
-          threshold: 'BLOCK_ONLY_HIGH'
-        }
-      ]
+          threshold: 'BLOCK_ONLY_HIGH',
+        },
+      ],
     });
-    providerStore.set(new AIProvider({ 
-      ...config,
-      defaultProvider: 'gemini',
-      provider: geminiProvider
-    }));
+    providerStore.set(
+      new AIProvider({
+        ...config,
+        defaultProvider: 'gemini',
+        provider: geminiProvider,
+      }),
+    );
   } else {
     providerStore.set(new AIProvider(config));
   }

@@ -60,7 +60,7 @@ import {
   Wand2,
   Wifi,
   X,
-  type LucideIcon
+  type LucideIcon,
 } from 'lucide-react';
 
 // Map framework/technology names to icons
@@ -74,7 +74,7 @@ export const FrameworkIcons: Record<string, LucideIcon> = {
   nuxt: Layout,
   remix: FileCode,
   typescript: Type,
-  vite: Wand2
+  vite: Wand2,
 };
 
 // Export commonly used icons
@@ -99,7 +99,7 @@ export const Icons = {
   alert: AlertTriangle,
   archive: Archive,
   download: ArrowDownToLine,
-  battery: BatteryCharging, 
+  battery: BatteryCharging,
   clock: Clock,
   cloudSettings: CloudCog,
   code: Code,

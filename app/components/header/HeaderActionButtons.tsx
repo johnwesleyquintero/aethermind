@@ -1,13 +1,6 @@
 import { motion } from 'framer-motion';
 import { Button } from '~/components/ui/Button';
-import { 
-  Download,
-  Copy,
-  Share,
-  Cpu,
-  Terminal,
-  FolderOpen
-} from 'lucide-react';
+import { Download, Copy, Share, Cpu, Terminal, FolderOpen } from 'lucide-react';
 
 export function HeaderActionButtons() {
   return (
@@ -19,7 +12,7 @@ export function HeaderActionButtons() {
         <Copy className="w-4 h-4" />
       </Button>
       <Button variant="ghost" size="icon">
-        <Share className="w-4 h-4" />  
+        <Share className="w-4 h-4" />
       </Button>
       <Button variant="ghost" size="icon">
         <Terminal className="w-4 h-4" />

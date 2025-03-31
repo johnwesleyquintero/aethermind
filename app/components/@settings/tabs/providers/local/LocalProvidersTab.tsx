@@ -23,7 +23,7 @@ type ProviderName = 'Ollama' | 'LMStudio' | 'OpenAILike';
 const PROVIDER_ICONS: Record<ProviderName, React.ReactNode> = {
   Ollama: <Bot className="w-5 h-5" />,
   LMStudio: <Cpu className="w-5 h-5" />,
-  OpenAILike: <Server className="w-5 h-5" />
+  OpenAILike: <Server className="w-5 h-5" />,
 };
 
 // Update PROVIDER_DESCRIPTIONS to use the same type

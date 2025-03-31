@@ -1,40 +1,41 @@
 # Code Citations
 
 ## License: MIT
+
 https://github.com/noahgsolomon/Codefoli/blob/2202ba68ac4b3294191eddc4fa550c541afeb7ba/lambda/codefolio-react-download.mjs
 
 ```
 bun
 ```
 
-
 ## License: unknown
+
 https://github.com/sao-lang/laniakea-cli/blob/ba4c2b3f8e0b190df84b73b481bb8bedf5fa4521/packages/builder/src/ejs/spa/react/tsconfig.json.ejs
 
 ```
 bun
 ```
 
-
 ## License: MIT
+
 https://github.com/noahgsolomon/Codefoli/blob/2202ba68ac4b3294191eddc4fa550c541afeb7ba/lambda/codefolio-react-download.mjs
 
 ```
 bundler",
-    
+
 ```
 
-
 ## License: unknown
+
 https://github.com/sao-lang/laniakea-cli/blob/ba4c2b3f8e0b190df84b73b481bb8bedf5fa4521/packages/builder/src/ejs/spa/react/tsconfig.json.ejs
 
 ```
 bundler",
-    
+
 ```
 
-
 ## License: MIT
+
 https://github.com/noahgsolomon/Codefoli/blob/2202ba68ac4b3294191eddc4fa550c541afeb7ba/lambda/codefolio-react-download.mjs
 
 ```
@@ -42,8 +43,8 @@ bundler",
     "allow
 ```
 
-
 ## License: unknown
+
 https://github.com/sao-lang/laniakea-cli/blob/ba4c2b3f8e0b190df84b73b481bb8bedf5fa4521/packages/builder/src/ejs/spa/react/tsconfig.json.ejs
 
 ```
@@ -51,8 +52,8 @@ bundler",
     "allow
 ```
 
-
 ## License: MIT
+
 https://github.com/noahgsolomon/Codefoli/blob/2202ba68ac4b3294191eddc4fa550c541afeb7ba/lambda/codefolio-react-download.mjs
 
 ```
@@ -60,8 +61,8 @@ bundler",
     "allowIm
 ```
 
-
 ## License: unknown
+
 https://github.com/sao-lang/laniakea-cli/blob/ba4c2b3f8e0b190df84b73b481bb8bedf5fa4521/packages/builder/src/ejs/spa/react/tsconfig.json.ejs
 
 ```
@@ -69,8 +70,8 @@ bundler",
     "allowIm
 ```
 
-
 ## License: MIT
+
 https://github.com/noahgsolomon/Codefoli/blob/2202ba68ac4b3294191eddc4fa550c541afeb7ba/lambda/codefolio-react-download.mjs
 
 ```
@@ -78,8 +79,8 @@ bundler",
     "allowImportingT
 ```
 
-
 ## License: unknown
+
 https://github.com/sao-lang/laniakea-cli/blob/ba4c2b3f8e0b190df84b73b481bb8bedf5fa4521/packages/builder/src/ejs/spa/react/tsconfig.json.ejs
 
 ```
@@ -87,8 +88,8 @@ bundler",
     "allowImportingT
 ```
 
-
 ## License: MIT
+
 https://github.com/noahgsolomon/Codefoli/blob/2202ba68ac4b3294191eddc4fa550c541afeb7ba/lambda/codefolio-react-download.mjs
 
 ```
@@ -96,8 +97,8 @@ bundler",
     "allowImportingTsExtensions":
 ```
 
-
 ## License: unknown
+
 https://github.com/sao-lang/laniakea-cli/blob/ba4c2b3f8e0b190df84b73b481bb8bedf5fa4521/packages/builder/src/ejs/spa/react/tsconfig.json.ejs
 
 ```
@@ -105,28 +106,28 @@ bundler",
     "allowImportingTsExtensions":
 ```
 
-
 ## License: MIT
+
 https://github.com/noahgsolomon/Codefoli/blob/2202ba68ac4b3294191eddc4fa550c541afeb7ba/lambda/codefolio-react-download.mjs
 
 ```
 bundler",
     "allowImportingTsExtensions": true,
-    
+
 ```
 
-
 ## License: unknown
+
 https://github.com/sao-lang/laniakea-cli/blob/ba4c2b3f8e0b190df84b73b481bb8bedf5fa4521/packages/builder/src/ejs/spa/react/tsconfig.json.ejs
 
 ```
 bundler",
     "allowImportingTsExtensions": true,
-    
+
 ```
 
-
 ## License: MIT
+
 https://github.com/noahgsolomon/Codefoli/blob/2202ba68ac4b3294191eddc4fa550c541afeb7ba/lambda/codefolio-react-download.mjs
 
 ```
@@ -135,8 +136,8 @@ bundler",
     "resol
 ```
 
-
 ## License: unknown
+
 https://github.com/sao-lang/laniakea-cli/blob/ba4c2b3f8e0b190df84b73b481bb8bedf5fa4521/packages/builder/src/ejs/spa/react/tsconfig.json.ejs
 
 ```
@@ -145,8 +146,8 @@ bundler",
     "resol
 ```
 
-
 ## License: MIT
+
 https://github.com/noahgsolomon/Codefoli/blob/2202ba68ac4b3294191eddc4fa550c541afeb7ba/lambda/codefolio-react-download.mjs
 
 ```
@@ -155,8 +156,8 @@ bundler",
     "resolveJsonModule":
 ```
 
-
 ## License: unknown
+
 https://github.com/sao-lang/laniakea-cli/blob/ba4c2b3f8e0b190df84b73b481bb8bedf5fa4521/packages/builder/src/ejs/spa/react/tsconfig.json.ejs
 
 ```
@@ -165,30 +166,30 @@ bundler",
     "resolveJsonModule":
 ```
 
-
 ## License: MIT
+
 https://github.com/noahgsolomon/Codefoli/blob/2202ba68ac4b3294191eddc4fa550c541afeb7ba/lambda/codefolio-react-download.mjs
 
 ```
 bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
-    
+
 ```
 
-
 ## License: unknown
+
 https://github.com/sao-lang/laniakea-cli/blob/ba4c2b3f8e0b190df84b73b481bb8bedf5fa4521/packages/builder/src/ejs/spa/react/tsconfig.json.ejs
 
 ```
 bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
-    
+
 ```
 
-
 ## License: MIT
+
 https://github.com/noahgsolomon/Codefoli/blob/2202ba68ac4b3294191eddc4fa550c541afeb7ba/lambda/codefolio-react-download.mjs
 
 ```
@@ -198,8 +199,8 @@ bundler",
     "isolatedMo
 ```
 
-
 ## License: unknown
+
 https://github.com/sao-lang/laniakea-cli/blob/ba4c2b3f8e0b190df84b73b481bb8bedf5fa4521/packages/builder/src/ejs/spa/react/tsconfig.json.ejs
 
 ```
@@ -209,8 +210,8 @@ bundler",
     "isolatedMo
 ```
 
-
 ## License: MIT
+
 https://github.com/noahgsolomon/Codefoli/blob/2202ba68ac4b3294191eddc4fa550c541afeb7ba/lambda/codefolio-react-download.mjs
 
 ```
@@ -220,8 +221,8 @@ bundler",
     "isolatedModules": true,
 ```
 
-
 ## License: unknown
+
 https://github.com/sao-lang/laniakea-cli/blob/ba4c2b3f8e0b190df84b73b481bb8bedf5fa4521/packages/builder/src/ejs/spa/react/tsconfig.json.ejs
 
 ```
@@ -231,8 +232,8 @@ bundler",
     "isolatedModules": true,
 ```
 
-
 ## License: MIT
+
 https://github.com/noahgsolomon/Codefoli/blob/2202ba68ac4b3294191eddc4fa550c541afeb7ba/lambda/codefolio-react-download.mjs
 
 ```
@@ -243,8 +244,8 @@ bundler",
     "no
 ```
 
-
 ## License: unknown
+
 https://github.com/sao-lang/laniakea-cli/blob/ba4c2b3f8e0b190df84b73b481bb8bedf5fa4521/packages/builder/src/ejs/spa/react/tsconfig.json.ejs
 
 ```
@@ -255,8 +256,8 @@ bundler",
     "no
 ```
 
-
 ## License: MIT
+
 https://github.com/noahgsolomon/Codefoli/blob/2202ba68ac4b3294191eddc4fa550c541afeb7ba/lambda/codefolio-react-download.mjs
 
 ```
@@ -267,8 +268,8 @@ bundler",
     "noEmit": true
 ```
 
-
 ## License: unknown
+
 https://github.com/sao-lang/laniakea-cli/blob/ba4c2b3f8e0b190df84b73b481bb8bedf5fa4521/packages/builder/src/ejs/spa/react/tsconfig.json.ejs
 
 ```
@@ -279,8 +280,8 @@ bundler",
     "noEmit": true
 ```
 
-
 ## License: MIT
+
 https://github.com/noahgsolomon/Codefoli/blob/2202ba68ac4b3294191eddc4fa550c541afeb7ba/lambda/codefolio-react-download.mjs
 
 ```
@@ -292,8 +293,8 @@ bundler",
     "
 ```
 
-
 ## License: unknown
+
 https://github.com/sao-lang/laniakea-cli/blob/ba4c2b3f8e0b190df84b73b481bb8bedf5fa4521/packages/builder/src/ejs/spa/react/tsconfig.json.ejs
 
 ```
@@ -305,8 +306,8 @@ bundler",
     "
 ```
 
-
 ## License: MIT
+
 https://github.com/noahgsolomon/Codefoli/blob/2202ba68ac4b3294191eddc4fa550c541afeb7ba/lambda/codefolio-react-download.mjs
 
 ```
@@ -318,8 +319,8 @@ bundler",
     "jsx": "react
 ```
 
-
 ## License: unknown
+
 https://github.com/sao-lang/laniakea-cli/blob/ba4c2b3f8e0b190df84b73b481bb8bedf5fa4521/packages/builder/src/ejs/spa/react/tsconfig.json.ejs
 
 ```
@@ -331,8 +332,8 @@ bundler",
     "jsx": "react
 ```
 
-
 ## License: MIT
+
 https://github.com/noahgsolomon/Codefoli/blob/2202ba68ac4b3294191eddc4fa550c541afeb7ba/lambda/codefolio-react-download.mjs
 
 ```
@@ -344,8 +345,8 @@ bundler",
     "jsx": "react-jsx",
 ```
 
-
 ## License: unknown
+
 https://github.com/sao-lang/laniakea-cli/blob/ba4c2b3f8e0b190df84b73b481bb8bedf5fa4521/packages/builder/src/ejs/spa/react/tsconfig.json.ejs
 
 ```
@@ -357,8 +358,8 @@ bundler",
     "jsx": "react-jsx",
 ```
 
-
 ## License: MIT
+
 https://github.com/noahgsolomon/Codefoli/blob/2202ba68ac4b3294191eddc4fa550c541afeb7ba/lambda/codefolio-react-download.mjs
 
 ```
@@ -371,8 +372,8 @@ bundler",
     "strict
 ```
 
-
 ## License: unknown
+
 https://github.com/sao-lang/laniakea-cli/blob/ba4c2b3f8e0b190df84b73b481bb8bedf5fa4521/packages/builder/src/ejs/spa/react/tsconfig.json.ejs
 
 ```
@@ -385,8 +386,8 @@ bundler",
     "strict
 ```
 
-
 ## License: MIT
+
 https://github.com/noahgsolomon/Codefoli/blob/2202ba68ac4b3294191eddc4fa550c541afeb7ba/lambda/codefolio-react-download.mjs
 
 ```
@@ -399,8 +400,8 @@ bundler",
     "strict": true,
 ```
 
-
 ## License: unknown
+
 https://github.com/sao-lang/laniakea-cli/blob/ba4c2b3f8e0b190df84b73b481bb8bedf5fa4521/packages/builder/src/ejs/spa/react/tsconfig.json.ejs
 
 ```
@@ -413,8 +414,8 @@ bundler",
     "strict": true,
 ```
 
-
 ## License: MIT
+
 https://github.com/noahgsolomon/Codefoli/blob/2202ba68ac4b3294191eddc4fa550c541afeb7ba/lambda/codefolio-react-download.mjs
 
 ```
@@ -428,8 +429,8 @@ bundler",
     "no
 ```
 
-
 ## License: unknown
+
 https://github.com/sao-lang/laniakea-cli/blob/ba4c2b3f8e0b190df84b73b481bb8bedf5fa4521/packages/builder/src/ejs/spa/react/tsconfig.json.ejs
 
 ```
@@ -443,8 +444,8 @@ bundler",
     "no
 ```
 
-
 ## License: MIT
+
 https://github.com/noahgsolomon/Codefoli/blob/2202ba68ac4b3294191eddc4fa550c541afeb7ba/lambda/codefolio-react-download.mjs
 
 ```
@@ -458,8 +459,8 @@ bundler",
     "noUn
 ```
 
-
 ## License: unknown
+
 https://github.com/sao-lang/laniakea-cli/blob/ba4c2b3f8e0b190df84b73b481bb8bedf5fa4521/packages/builder/src/ejs/spa/react/tsconfig.json.ejs
 
 ```
@@ -473,8 +474,8 @@ bundler",
     "noUn
 ```
 
-
 ## License: MIT
+
 https://github.com/noahgsolomon/Codefoli/blob/2202ba68ac4b3294191eddc4fa550c541afeb7ba/lambda/codefolio-react-download.mjs
 
 ```
@@ -488,8 +489,8 @@ bundler",
     "noUnusedLocals
 ```
 
-
 ## License: unknown
+
 https://github.com/sao-lang/laniakea-cli/blob/ba4c2b3f8e0b190df84b73b481bb8bedf5fa4521/packages/builder/src/ejs/spa/react/tsconfig.json.ejs
 
 ```
@@ -503,8 +504,8 @@ bundler",
     "noUnusedLocals
 ```
 
-
 ## License: MIT
+
 https://github.com/noahgsolomon/Codefoli/blob/2202ba68ac4b3294191eddc4fa550c541afeb7ba/lambda/codefolio-react-download.mjs
 
 ```
@@ -518,8 +519,8 @@ bundler",
     "noUnusedLocals": true,
 ```
 
-
 ## License: unknown
+
 https://github.com/sao-lang/laniakea-cli/blob/ba4c2b3f8e0b190df84b73b481bb8bedf5fa4521/packages/builder/src/ejs/spa/react/tsconfig.json.ejs
 
 ```
@@ -533,8 +534,8 @@ bundler",
     "noUnusedLocals": true,
 ```
 
-
 ## License: MIT
+
 https://github.com/noahgsolomon/Codefoli/blob/2202ba68ac4b3294191eddc4fa550c541afeb7ba/lambda/codefolio-react-download.mjs
 
 ```
@@ -549,8 +550,8 @@ bundler",
     "noUn
 ```
 
-
 ## License: unknown
+
 https://github.com/sao-lang/laniakea-cli/blob/ba4c2b3f8e0b190df84b73b481bb8bedf5fa4521/packages/builder/src/ejs/spa/react/tsconfig.json.ejs
 
 ```
@@ -565,8 +566,8 @@ bundler",
     "noUn
 ```
 
-
 ## License: MIT
+
 https://github.com/noahgsolomon/Codefoli/blob/2202ba68ac4b3294191eddc4fa550c541afeb7ba/lambda/codefolio-react-download.mjs
 
 ```
@@ -581,8 +582,8 @@ bundler",
     "noUnusedParameters":
 ```
 
-
 ## License: unknown
+
 https://github.com/sao-lang/laniakea-cli/blob/ba4c2b3f8e0b190df84b73b481bb8bedf5fa4521/packages/builder/src/ejs/spa/react/tsconfig.json.ejs
 
 ```
@@ -597,8 +598,8 @@ bundler",
     "noUnusedParameters":
 ```
 
-
 ## License: MIT
+
 https://github.com/noahgsolomon/Codefoli/blob/2202ba68ac4b3294191eddc4fa550c541afeb7ba/lambda/codefolio-react-download.mjs
 
 ```
@@ -611,11 +612,11 @@ bundler",
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    
+
 ```
 
-
 ## License: unknown
+
 https://github.com/sao-lang/laniakea-cli/blob/ba4c2b3f8e0b190df84b73b481bb8bedf5fa4521/packages/builder/src/ejs/spa/react/tsconfig.json.ejs
 
 ```
@@ -628,11 +629,11 @@ bundler",
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    
+
 ```
 
-
 ## License: MIT
+
 https://github.com/noahgsolomon/Codefoli/blob/2202ba68ac4b3294191eddc4fa550c541afeb7ba/lambda/codefolio-react-download.mjs
 
 ```
@@ -648,8 +649,8 @@ bundler",
     "no
 ```
 
-
 ## License: unknown
+
 https://github.com/sao-lang/laniakea-cli/blob/ba4c2b3f8e0b190df84b73b481bb8bedf5fa4521/packages/builder/src/ejs/spa/react/tsconfig.json.ejs
 
 ```
@@ -665,8 +666,8 @@ bundler",
     "no
 ```
 
-
 ## License: MIT
+
 https://github.com/noahgsolomon/Codefoli/blob/2202ba68ac4b3294191eddc4fa550c541afeb7ba/lambda/codefolio-react-download.mjs
 
 ```
@@ -682,8 +683,8 @@ bundler",
     "noF
 ```
 
-
 ## License: unknown
+
 https://github.com/sao-lang/laniakea-cli/blob/ba4c2b3f8e0b190df84b73b481bb8bedf5fa4521/packages/builder/src/ejs/spa/react/tsconfig.json.ejs
 
 ```
@@ -699,8 +700,8 @@ bundler",
     "noF
 ```
 
-
 ## License: MIT
+
 https://github.com/noahgsolomon/Codefoli/blob/2202ba68ac4b3294191eddc4fa550c541afeb7ba/lambda/codefolio-react-download.mjs
 
 ```
@@ -716,8 +717,8 @@ bundler",
     "noFallthrough
 ```
 
-
 ## License: unknown
+
 https://github.com/sao-lang/laniakea-cli/blob/ba4c2b3f8e0b190df84b73b481bb8bedf5fa4521/packages/builder/src/ejs/spa/react/tsconfig.json.ejs
 
 ```
@@ -733,8 +734,8 @@ bundler",
     "noFallthrough
 ```
 
-
 ## License: MIT
+
 https://github.com/noahgsolomon/Codefoli/blob/2202ba68ac4b3294191eddc4fa550c541afeb7ba/lambda/codefolio-react-download.mjs
 
 ```
@@ -750,8 +751,8 @@ bundler",
     "noFallthroughCasesIn
 ```
 
-
 ## License: unknown
+
 https://github.com/sao-lang/laniakea-cli/blob/ba4c2b3f8e0b190df84b73b481bb8bedf5fa4521/packages/builder/src/ejs/spa/react/tsconfig.json.ejs
 
 ```
@@ -767,8 +768,8 @@ bundler",
     "noFallthroughCasesIn
 ```
 
-
 ## License: MIT
+
 https://github.com/noahgsolomon/Codefoli/blob/2202ba68ac4b3294191eddc4fa550c541afeb7ba/lambda/codefolio-react-download.mjs
 
 ```
@@ -784,8 +785,8 @@ bundler",
     "noFallthroughCasesInSwitch": true
 ```
 
-
 ## License: unknown
+
 https://github.com/sao-lang/laniakea-cli/blob/ba4c2b3f8e0b190df84b73b481bb8bedf5fa4521/packages/builder/src/ejs/spa/react/tsconfig.json.ejs
 
 ```
@@ -801,8 +802,8 @@ bundler",
     "noFallthroughCasesInSwitch": true
 ```
 
-
 ## License: MIT
+
 https://github.com/noahgsolomon/Codefoli/blob/2202ba68ac4b3294191eddc4fa550c541afeb7ba/lambda/codefolio-react-download.mjs
 
 ```
@@ -819,8 +820,8 @@ bundler",
     "
 ```
 
-
 ## License: unknown
+
 https://github.com/sao-lang/laniakea-cli/blob/ba4c2b3f8e0b190df84b73b481bb8bedf5fa4521/packages/builder/src/ejs/spa/react/tsconfig.json.ejs
 
 ```
@@ -837,8 +838,8 @@ bundler",
     "
 ```
 
-
 ## License: MIT
+
 https://github.com/noahgsolomon/Codefoli/blob/2202ba68ac4b3294191eddc4fa550c541afeb7ba/lambda/codefolio-react-download.mjs
 
 ```
@@ -855,8 +856,8 @@ bundler",
     "base
 ```
 
-
 ## License: unknown
+
 https://github.com/sao-lang/laniakea-cli/blob/ba4c2b3f8e0b190df84b73b481bb8bedf5fa4521/packages/builder/src/ejs/spa/react/tsconfig.json.ejs
 
 ```
@@ -873,8 +874,8 @@ bundler",
     "base
 ```
 
-
 ## License: MIT
+
 https://github.com/noahgsolomon/Codefoli/blob/2202ba68ac4b3294191eddc4fa550c541afeb7ba/lambda/codefolio-react-download.mjs
 
 ```
@@ -891,8 +892,8 @@ bundler",
     "baseUrl": ".
 ```
 
-
 ## License: unknown
+
 https://github.com/sao-lang/laniakea-cli/blob/ba4c2b3f8e0b190df84b73b481bb8bedf5fa4521/packages/builder/src/ejs/spa/react/tsconfig.json.ejs
 
 ```
@@ -908,4 +909,3 @@ bundler",
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".
 ```
-

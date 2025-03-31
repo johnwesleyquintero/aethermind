@@ -60,9 +60,9 @@ export class AIProvider {
   private async geminiChat(messages: Array<{ role: string; content: string }>) {
     const lastMessage = messages[messages.length - 1];
     const result = await this.#gemini!.generateResponse(lastMessage.content);
-    return { 
-      role: 'assistant', 
-      content: result.text 
+    return {
+      role: 'assistant',
+      content: result.text,
     };
   }
 }

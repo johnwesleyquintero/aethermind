@@ -31,7 +31,7 @@ export const STARTER_TEMPLATES: Template[] = [
     description: 'Official Aethermind React + Vite template with AI features',
     githubRepo: 'johnwesleyquintero/aether-vite-react-template',
     tags: ['react', 'vite', 'typescript', 'ai'],
-    icon: 'i-aether:react'
+    icon: 'i-aether:react',
   },
   {
     name: 'aether-next-app',
@@ -39,7 +39,7 @@ export const STARTER_TEMPLATES: Template[] = [
     description: 'Full-stack Next.js 14 template with App Router',
     githubRepo: 'johnwesleyquintero/aether-next-template',
     tags: ['next.js', 'react', 'fullstack'],
-    icon: 'i-aether:next'
+    icon: 'i-aether:next',
   },
   {
     name: 'bolt-astro-basic',
@@ -136,7 +136,7 @@ export const AETHER_CONFIG = {
   wsEndpoint: '/ws',
   defaultTheme: 'system',
   updateChannel: 'stable',
-  telemetryEnabled: false
+  telemetryEnabled: false,
 };
 
 export const PROJECT_METADATA = {
@@ -144,5 +144,5 @@ export const PROJECT_METADATA = {
   issues: 'https://github.com/johnwesleyquintero/aethermind/issues',
   docs: 'https://aethermind-dev.vercel.app/docs',
   discord: 'https://discord.gg/aethermind',
-  version: '1.0.0'
+  version: '1.0.0',
 };

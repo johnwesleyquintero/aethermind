@@ -7,7 +7,7 @@ interface ErrorWithCode extends Error {
 
 export function handleError(error: unknown, context: string) {
   const err = error as ErrorWithCode;
-  
+
   // Format error details
   const errorDetails = {
     message: err.message || 'An unknown error occurred',
@@ -19,7 +19,7 @@ export function handleError(error: unknown, context: string) {
   // Log error
   logStore.logError(errorDetails.message, {
     ...errorDetails,
-    stack: err.stack
+    stack: err.stack,
   });
 
   // Return formatted error for UI
@@ -42,7 +42,7 @@ function getUserFriendlyMessage(error: ErrorWithCode): string {
 }
 
 export function withErrorBoundary<T>(fn: () => Promise<T>, context: string): Promise<T> {
-  return fn().catch(error => {
+  return fn().catch((error) => {
     const handledError = handleError(error, context);
     throw new Error(handledError.userMessage);
   });

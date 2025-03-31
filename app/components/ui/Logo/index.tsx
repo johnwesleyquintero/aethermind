@@ -7,22 +7,14 @@ interface LogoProps {
   height?: number;
 }
 
-export const Logo = ({ 
-  className, 
-  variant = 'light',
-  width = 32,
-  height = 32 
-}: LogoProps) => {
+export const Logo = ({ className, variant = 'light', width = 32, height = 32 }: LogoProps) => {
   return (
     <img
       src={`/logo/logo-${variant}.svg`}
       alt="Aethermind"
       width={width}
       height={height}
-      className={classNames(
-        'h-auto w-auto transition-all duration-200',
-        className
-      )}
+      className={classNames('h-auto w-auto transition-all duration-200', className)}
     />
   );
 };

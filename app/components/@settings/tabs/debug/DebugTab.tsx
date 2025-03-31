@@ -20,7 +20,7 @@ import {
   RefreshCw,
   AlertTriangle,
   XCircle,
-  CheckCircle
+  CheckCircle,
 } from 'lucide-react';
 
 interface SystemInfo {
@@ -233,7 +233,7 @@ const DependencySection = ({
 const StatusIcons = {
   error: <XCircle className="w-4 h-4 text-red-500" />,
   warning: <AlertTriangle className="w-4 h-4 text-yellow-500" />,
-  success: <CheckCircle className="w-4 h-4 text-green-500" />
+  success: <CheckCircle className="w-4 h-4 text-green-500" />,
 };
 
 const MetricsIcons = {
@@ -241,7 +241,7 @@ const MetricsIcons = {
   memory: <Memory className="w-5 h-5" />,
   activity: <Activity className="w-5 h-5" />,
   storage: <HardDrive className="w-5 h-5" />,
-  network: <Network className="w-5 h-5" />
+  network: <Network className="w-5 h-5" />,
 };
 
 export default function DebugTab() {

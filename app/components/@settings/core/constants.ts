@@ -1,5 +1,20 @@
 import type { TabType } from './types';
-import { UserCircle, Settings, Bell, Star, Database, Cloud, Monitor, Activity, Network, Bug, ScrollText, RefreshCw, LineChart, LayoutGrid } from 'lucide-react';
+import {
+  UserCircle,
+  Settings,
+  Bell,
+  Star,
+  Database,
+  Cloud,
+  Monitor,
+  Activity,
+  Network,
+  Bug,
+  ScrollText,
+  RefreshCw,
+  LineChart,
+  LayoutGrid,
+} from 'lucide-react';
 
 export const TAB_ICONS = {
   profile: UserCircle,

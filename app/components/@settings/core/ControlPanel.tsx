@@ -23,7 +23,20 @@ import { TAB_LABELS, DEFAULT_TAB_CONFIG } from './constants';
 import { DialogTitle } from '~/components/ui/Dialog';
 import { AvatarDropdown } from './AvatarDropdown';
 import BackgroundRays from '~/components/ui/BackgroundRays';
-import { Settings, Bell, Star, Database, Cloud, Monitor, Activity, Bug, History, RefreshCw, Network, Desktop } from 'lucide-react';
+import {
+  Settings,
+  Bell,
+  Star,
+  Database,
+  Cloud,
+  Monitor,
+  Activity,
+  Bug,
+  History,
+  RefreshCw,
+  Network,
+  Desktop,
+} from 'lucide-react';
 
 // Import all tab components
 import ProfileTab from '~/components/@settings/tabs/profile/ProfileTab';
@@ -318,7 +331,7 @@ export const ControlPanel = ({ open, onClose }: ControlPanelProps) => {
     'event-logs': <EventLogsTab />,
     update: <UpdateTab />,
     'task-manager': <TaskManagerTab />,
-    'tab-management': <TabManagement />
+    'tab-management': <TabManagement />,
   } as Record<TabType | 'tab-management', React.ReactNode>;
 
   const getTabComponent = (tabId: TabType | 'tab-management') => {

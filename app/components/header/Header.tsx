@@ -10,18 +10,22 @@ export function Header() {
   const chat = useStore(chatStore);
 
   return (
-    <header className={classNames('flex items-center px-4 h-14 border-b border-bolt-elements-borderColor bg-bolt-elements-background-depth-1', {
-      'border-transparent': !chat.started,
-      'border-aethermind-elements-borderColor': chat.started,
-    })}
+    <header
+      className={classNames(
+        'flex items-center px-4 h-14 border-b border-bolt-elements-borderColor bg-bolt-elements-background-depth-1',
+        {
+          'border-transparent': !chat.started,
+          'border-aethermind-elements-borderColor': chat.started,
+        },
+      )}
     >
       <div className="flex items-center gap-2 z-logo text-aethermind-elements-textPrimary cursor-pointer">
         <a href="/" className="flex items-center">
-          <Logo 
-            variant={isDarkMode ? 'dark' : 'light'} 
-            width={24} 
+          <Logo
+            variant={isDarkMode ? 'dark' : 'light'}
+            width={24}
             height={24}
-            className="hover:opacity-80 transition-opacity" 
+            className="hover:opacity-80 transition-opacity"
           />
         </a>
         <h1>Aethermind</h1>

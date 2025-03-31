@@ -18,15 +18,21 @@ const CODE_GENERATION_CONFIG = {
 
 export const geminiConfigSchema = z.object({
   apiKey: z.string(),
-  safetySettings: z.array(z.object({
-    category: z.string(),
-    threshold: z.string()
-  })).optional(),
-  generationConfig: z.object({
-    temperature: z.number(),
-    topP: z.number(),
-    maxTokens: z.number(),
-  }).optional(),
+  safetySettings: z
+    .array(
+      z.object({
+        category: z.string(),
+        threshold: z.string(),
+      }),
+    )
+    .optional(),
+  generationConfig: z
+    .object({
+      temperature: z.number(),
+      topP: z.number(),
+      maxTokens: z.number(),
+    })
+    .optional(),
 });
 
 export class GeminiProvider {
@@ -55,8 +61,8 @@ export class GeminiProvider {
         usage: {
           promptTokens: 0, // Gemini doesn't provide token counts
           completionTokens: 0,
-          totalTokens: 0
-        }
+          totalTokens: 0,
+        },
       };
     } catch (error) {
       console.error('Gemini generation error:', error);

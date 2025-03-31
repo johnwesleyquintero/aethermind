@@ -1,10 +1,27 @@
 import blitzPlugin from '@blitz/eslint-plugin';
 import { jsFileExtensions } from '@blitz/eslint-plugin/dist/configs/javascript.js';
 import { getNamingConventionRule, tsFileExtensions } from '@blitz/eslint-plugin/dist/configs/typescript.js';
+import globals from 'globals';
 
 export default [
   {
     ignores: ['**/dist', '**/node_modules', '**/.wrangler', '**/bolt/build', '**/.history'],
+  },
+  {
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        ...globals.es2021
+      },
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
+    }
   },
   ...blitzPlugin.configs.recommended(),
   {
@@ -18,8 +35,8 @@ export default [
       'object-curly-newline': ['error', { consistent: true }],
       'keyword-spacing': ['error', { before: true, after: true }],
       'consistent-return': 'error',
-      semi: ['error', 'always'],
-      curly: ['error'],
+      'semi': ['error', 'always'],
+      'curly': ['error'],
       'no-eval': ['error'],
       'linebreak-style': ['error', 'unix'],
       'arrow-spacing': ['error', { before: true, after: true }],
@@ -54,4 +71,19 @@ export default [
       ],
     },
   },
+  {
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      parser: '@typescript-eslint/parser',
+      parserOptions: {
+        project: ['./tsconfig.json'],
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
+    },
+    plugins: {
+      '@typescript-eslint': '@typescript-eslint/eslint-plugin'
+    }
+  }
 ];

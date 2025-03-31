@@ -25,7 +25,7 @@ export class ErrorBoundary extends React.Component<Props, State> {
     logStore.logErrorWithStack(error, 'error', {
       component: 'ErrorBoundary',
       retryCount: this.state.retryCount,
-      ...errorInfo
+      ...errorInfo,
     });
   }
 
@@ -33,14 +33,14 @@ export class ErrorBoundary extends React.Component<Props, State> {
     if (this.state.retryCount >= 3) {
       logStore.logWarning('Maximum retry attempts reached', {
         error: this.state.error,
-        component: 'ErrorBoundary'
+        component: 'ErrorBoundary',
       });
       return;
     }
 
-    this.setState(state => ({
+    this.setState((state) => ({
       hasError: false,
-      retryCount: state.retryCount + 1
+      retryCount: state.retryCount + 1,
     }));
   };
 
@@ -49,9 +49,7 @@ export class ErrorBoundary extends React.Component<Props, State> {
       return (
         <div className="flex flex-col items-center justify-center h-full p-4 bg-bolt-elements-background-depth-1">
           <div className="text-red-500 text-xl mb-4">Something went wrong</div>
-          <div className="text-sm text-bolt-elements-textSecondary mb-4">
-            {this.state.error?.message}
-          </div>
+          <div className="text-sm text-bolt-elements-textSecondary mb-4">{this.state.error?.message}</div>
           {this.state.retryCount < 3 ? (
             <button
               className="px-4 py-2 bg-bolt-elements-background-depth-2 hover:bg-bolt-elements-background-depth-3 rounded"
@@ -60,9 +58,7 @@ export class ErrorBoundary extends React.Component<Props, State> {
               Try again ({3 - this.state.retryCount} attempts remaining)
             </button>
           ) : (
-            <div className="text-bolt-elements-textTertiary">
-              Please refresh the page to try again
-            </div>
+            <div className="text-bolt-elements-textTertiary">Please refresh the page to try again</div>
           )}
         </div>
       );

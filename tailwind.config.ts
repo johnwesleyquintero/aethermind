@@ -16,7 +16,7 @@ export default {
           accent: '#4f46e5',
           background: 'var(--aether-background)',
           text: 'var(--aether-text)',
-        }
+        },
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -35,7 +35,7 @@ export default {
         },
       },
       borderRadius: {
-        'aether': '0.5rem',
+        aether: '0.5rem',
         'aether-lg': '1rem',
         'aether-full': '9999px',
       },
@@ -46,10 +46,10 @@ export default {
         'aether-4': '1rem',
       },
       boxShadow: {
-        'aether': '0 2px 8px 2px rgba(99, 102, 241, 0.1)',
+        aether: '0 2px 8px 2px rgba(99, 102, 241, 0.1)',
         'aether-lg': '0 4px 12px 4px rgba(99, 102, 241, 0.15)',
       },
-    }
+    },
   },
-  plugins: []
+  plugins: [],
 } satisfies Config;

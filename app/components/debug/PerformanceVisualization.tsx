@@ -18,19 +18,19 @@ export function PerformanceVisualization() {
     drawMetricGraph(ctx, data, 'fps', 0, 100, '#22c55e', '#ef4444');
     drawMetricGraph(ctx, data, 'memoryUsage', 100, 200, '#3b82f6', '#f59e0b');
     drawMetricGraph(ctx, data, 'networkLatency', 200, 300, '#8b5cf6', '#ef4444');
-    
+
     // Add legends
     drawLegends(ctx);
   }, [metrics]);
 
   const drawMetricGraph = (
-    ctx: CanvasRenderingContext2D, 
+    ctx: CanvasRenderingContext2D,
     data: PerformanceMetrics[],
     metric: keyof PerformanceMetrics,
     startY: number,
     endY: number,
     normalColor: string,
-    alertColor: string
+    alertColor: string,
   ) => {
     data.forEach((point, i) => {
       const value = point[metric] as number;
@@ -52,15 +52,8 @@ export function PerformanceVisualization() {
   return (
     <div className="p-4 bg-bolt-elements-background-depth-2 rounded-lg">
       <h3 className="text-lg font-medium mb-4">Performance Metrics</h3>
-      <canvas 
-        ref={canvasRef}
-        width={600}
-        height={300}
-        className="w-full"
-      />
-      <div className="mt-4 text-sm text-bolt-elements-textSecondary">
-        Last 30 seconds of metrics
-      </div>
+      <canvas ref={canvasRef} width={600} height={300} className="w-full" />
+      <div className="mt-4 text-sm text-bolt-elements-textSecondary">Last 30 seconds of metrics</div>
     </div>
   );
 }

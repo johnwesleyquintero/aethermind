@@ -13,18 +13,18 @@ const features: Feature[] = [
   {
     name: 'AI-Powered Development',
     description: 'Get intelligent code suggestions and explanations',
-    icon: <Icons.bot className="w-6 h-6" />
+    icon: <Icons.bot className="w-6 h-6" />,
   },
   {
     name: 'Code Generation',
     description: 'Generate code from natural language descriptions',
-    icon: <Icons.code className="w-6 h-6" />
+    icon: <Icons.code className="w-6 h-6" />,
   },
   {
     name: 'Smart Features',
     description: 'Access advanced development tools and helpers',
-    icon: <Icons.wand className="w-6 h-6" />
-  }
+    icon: <Icons.wand className="w-6 h-6" />,
+  },
 ];
 
 export function StartupDialog() {

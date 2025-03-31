@@ -21,6 +21,7 @@ const getModifierSymbol = (modifier: string): string => {
 };
 
 export default function SettingsTab() {
+  const [focusedSection, setFocusedSection] = useState<string | null>(null);
   const [currentTimezone, setCurrentTimezone] = useState('');
   const [settings, setSettings] = useState<UserProfile>(() => {
     const saved = localStorage.getItem('bolt_user_profile');
@@ -60,7 +61,7 @@ export default function SettingsTab() {
   }, [settings]);
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8" role="region" aria-label="Settings Panel">
       {/* Language & Notifications */}
       <motion.div
         className="bg-white dark:bg-[#0A0A0A] rounded-lg shadow-sm dark:shadow-none p-4 space-y-4"
@@ -81,6 +82,9 @@ export default function SettingsTab() {
           <select
             value={settings.language}
             onChange={(e) => setSettings((prev) => ({ ...prev, language: e.target.value }))}
+            onFocus={() => setFocusedSection('language')}
+            onBlur={() => setFocusedSection(null)}
+            aria-label="Select language"
             className={classNames(
               'w-full px-3 py-2 rounded-lg text-sm',
               'bg-[#FAFAFA] dark:bg-[#0A0A0A]',
@@ -88,6 +92,9 @@ export default function SettingsTab() {
               'text-bolt-elements-textPrimary',
               'focus:outline-none focus:ring-2 focus:ring-purple-500/30',
               'transition-all duration-200',
+              'hover:border-purple-500/30',
+              'sm:text-base md:text-lg',
+              focusedSection === 'language' && 'ring-2 ring-purple-500/30',
             )}
           >
             <option value="en">English</option>
@@ -115,6 +122,7 @@ export default function SettingsTab() {
             <Switch
               checked={settings.notifications}
               onCheckedChange={(checked) => {
+                setFocusedSection('notifications');
                 // Update local state
                 setSettings((prev) => ({ ...prev, notifications: checked }));
 
@@ -161,6 +169,9 @@ export default function SettingsTab() {
           <select
             value={settings.timezone}
             onChange={(e) => setSettings((prev) => ({ ...prev, timezone: e.target.value }))}
+            onFocus={() => setFocusedSection('timezone')}
+            onBlur={() => setFocusedSection(null)}
+            aria-label="Select timezone"
             className={classNames(
               'w-full px-3 py-2 rounded-lg text-sm',
               'bg-[#FAFAFA] dark:bg-[#0A0A0A]',
@@ -168,6 +179,9 @@ export default function SettingsTab() {
               'text-bolt-elements-textPrimary',
               'focus:outline-none focus:ring-2 focus:ring-purple-500/30',
               'transition-all duration-200',
+              'hover:border-purple-500/30',
+              'sm:text-base md:text-lg',
+              focusedSection === 'language' && 'ring-2 ring-purple-500/30',
             )}
           >
             <option value={currentTimezone}>{currentTimezone}</option>
