@@ -564,4 +564,6 @@ export const TAB_ICONS: Record<TabType, React.ReactNode> = {
   debug: <Bug className="w-5 h-5" />,
   'event-logs': <History className="w-5 h-5" />,
   update: <RefreshCw className="w-5 h-5" />,
+  'task-manager': <ListTodo className="w-5 h-5" />,
+  'tab-management': <LayoutPanelTop className="w-5 h-5" />,
 };

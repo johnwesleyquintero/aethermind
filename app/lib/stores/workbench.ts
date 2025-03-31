@@ -51,7 +51,7 @@ export class WorkbenchStore {
   actionAlert: WritableAtom<ActionAlert | undefined> =
     import.meta.hot?.data.unsavedFiles ?? atom<ActionAlert | undefined>(undefined);
   supabaseAlert: WritableAtom<SupabaseAlert | undefined> =
-    import.meta.hot?.data.unsavedFiles ?? atom<ActionAlert | undefined>(undefined);
+    import.meta.hot?.data.unsavedFiles ?? atom<SupabaseAlert | undefined>(undefined);
   modifiedFiles = new Set<string>();
   artifactIdList: string[] = [];
   #globalExecutionQueue = Promise.resolve();
