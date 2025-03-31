@@ -525,7 +525,7 @@ export class WorkbenchStore {
     const uniqueProjectName = `${projectName}_${timestampHash}`;
 
     for (const [filePath, dirent] of Object.entries(files)) {
-      if (dirent?.type === 'file' && !dirent.isBinary) {
+      if (dirent?.type === 'file' && 'isBinary' in dirent && !dirent.isBinary) {
         const relativePath = extractRelativePath(filePath);
 
         // split the path into segments
@@ -556,7 +556,7 @@ export class WorkbenchStore {
     const syncedFiles = [];
 
     for (const [filePath, dirent] of Object.entries(files)) {
-      if (dirent?.type === 'file' && !dirent.isBinary) {
+      if (dirent?.type === 'file' && 'isBinary' in dirent && !dirent.isBinary) {
         const relativePath = extractRelativePath(filePath);
         const pathSegments = relativePath.split('/');
         let currentHandle = targetHandle;
@@ -626,7 +626,7 @@ export class WorkbenchStore {
       // Create blobs for each file
       const blobs = await Promise.all(
         Object.entries(files).map(async ([filePath, dirent]) => {
-          if (dirent?.type === 'file' && dirent.content) {
+          if (dirent?.type === 'file' && 'content' in dirent) {
             const { data: blob } = await octokit.git.createBlob({
               owner: repo.owner.login,
               repo: repo.name,
